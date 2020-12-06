@@ -1,5 +1,7 @@
 package com.example.android.aigames.sudoku.model;
 
+import com.example.android.aigames.sudoku.model.Cell;
+
 import java.util.ArrayList;
 import java.util.List;
 

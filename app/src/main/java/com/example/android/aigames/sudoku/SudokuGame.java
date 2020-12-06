@@ -8,8 +8,10 @@ import androidx.lifecycle.MutableLiveData;
 import com.example.android.aigames.sudoku.model.Board;
 import com.example.android.aigames.sudoku.model.Cell;
 
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 /**
  * Created by Omar Elashry on 2020-11-21.
@@ -209,6 +211,25 @@ public class SudokuGame {
         }
         cellsLiveData.postValue(board.getCells());
         isGameSolvedLiveData.postValue(gameSolved(board));
+    }
+
+    private HashSet<Integer> getValidInputs() {
+        if (selectedRow == -1 || selectedCol == -1) return null;
+        HashSet<Integer> validSet = new HashSet<>();
+        for (int i = 0; i < 9; i++) {
+            if (validValue(selectedRow, selectedCol, i, board))
+                validSet.add(i);
+        }
+        return validSet;
+    }
+
+    public void fillHints() {
+        if (selectedRow == -1 || selectedCol == -1 ||
+                getValidInputs() == null || getValidInputs().isEmpty())
+            return;
+        board.getCell(selectedRow, selectedCol).setValue(0);
+        board.getCell(selectedRow, selectedCol).setNotes(getValidInputs());
+        cellsLiveData.postValue(board.getCells());
     }
 
     public void updateSelectedCell(int row, int col) {

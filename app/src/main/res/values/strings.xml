@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">AiGames</string>
+    <string name="_8_queens">8 Queens</string>
+    <string name="solutions_count">%d solutions found</string>
 </resources>

@@ -48,6 +48,7 @@ public class SudokuActivity extends AppCompatActivity {
         initSphereView();
         sudokuBinding.noteBtnToggleGroup.addOnButtonCheckedListener((group, checkedId, isChecked) ->
                 viewModel.sudokuGame.changeTakingNoteState());
+        sudokuBinding.hintBtn.setOnClickListener(v -> viewModel.sudokuGame.fillHints());
         sudokuBinding.deleteBtn.setOnClickListener(v -> viewModel.sudokuGame.delete());
     }
 

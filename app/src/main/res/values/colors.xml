@@ -11,14 +11,20 @@
     <color name="lighterHoloBlue">#cfeeff</color>
     <color name="gray">#adadad</color>
     <color name="lighterGray">#dedede</color>
+    <color name="lighterGray2">#A5A5A5</color>
     <color name="prussianBlue">#0D324D</color>
     <color name="lighterPrussianBlue">#2a6087</color>
     <color name="darkerRose">#7F5A83</color>
     <color name="lighterRose">#A188A6</color>
     <color name="lighterRose2">#d5b2db</color>
+    <color name="lighterRose2_1">#F2E3F4</color>
     <color name="lighterRose3">#faedfc</color>
+    <color name="lighterRose4">#f3d3f8</color>
     <color name="silverMetallic">#9DA2AB</color>
     <color name="lightRed">#ffbac0</color>
     <color name="grayedRed">#d1a7ab</color>
+    <color name="grayedRose">#A48AA9</color>
+    <color name="holoRed">#FF4545</color>
+    <color name="gold">#E1C225</color>
 
 </resources>
